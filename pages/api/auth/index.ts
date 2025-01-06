@@ -1,10 +1,10 @@
 import { post } from "micro-method-router";
 
-export default function post(req, res) {
-  const email = req.body.email;
+export default post((req, res) => {
+  const email = req.body?.email || null;
   res.status(200).json({
     body: req.body,
     email: email,
     auth: true,
   });
-}
+});
