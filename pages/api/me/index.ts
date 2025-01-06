@@ -1,5 +1,5 @@
-const { send } = require("micro");
-const methods = require("micro-method-router");
+import { send } from "micro";
+import methods from "micro-method-router";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default methods({
