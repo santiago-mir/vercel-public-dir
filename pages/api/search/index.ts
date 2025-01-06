@@ -1,9 +1,9 @@
 const methods = require("micro-method-router");
+import type { NextApiRequest, NextApiResponse } from "next";
 
 export default methods({
-  async get(req, res) {
+  async get(req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json({
-      params: req.params,
       query: req.query,
       search: true,
     });
